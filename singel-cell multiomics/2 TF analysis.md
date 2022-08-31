@@ -1,4 +1,4 @@
-#TF analysis
+# TF analysis
 
 *Based on the single-cell RNA-seq data, R package named Scenic (https://github.com/aertslab/SCENIC) was used to perform transcript factor analysis.*
 
