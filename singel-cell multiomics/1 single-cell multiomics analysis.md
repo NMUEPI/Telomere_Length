@@ -1,13 +1,13 @@
-#Singel-cell multiomics analysis
+# Singel-cell multiomics analysis
 
-##1 Tert gene expression level
+## 1 Tert gene expression level
 
-###1.1 Data download
+### 1.1 Data download
 ```Shell
 wget -c https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE136714&format=file&file=GSE136714%5Fraw%2Ecounts%2Efor%2Egeo%2Exlsx
 ```
 
-###1.2 Analysis process
+### 1.2 Analysis process
 ```R
 library(data.table)
 library(DESeq2)
@@ -51,16 +51,16 @@ write.csv(final3,"8cell_32cell_Tert_counts.csv",quote=F,row.names=F)
 ```
 
 
-##2 Tert gene methylation level
+## 2 Tert gene methylation level
 
-###2.1 Data download and transformation
+### 2.1 Data download and transformation
 ```Shell
 wget -c https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE136715&format=file
 tar xvf GSE136715_RAW.tar
 bigWigToBedGraph ${sample}.WCG.bw ${sample}.WCG.bedGraph
 ```
 
-###2.2 Analysis process
+### 2.2 Analysis process
 ```R
 library(data.table)
 a<-list.files(pattern="*.WCG.bedGraph",full.names=T)
@@ -105,7 +105,7 @@ for (i in 2:length(a)){
 write.csv(final,"GEO_meth_level.csv",row.names=F,quote=F)
 ```
 
-##3 Multiomics analysis
+## 3 Multiomics analysis
 ```R
 meth=read.csv("GEO_meth_level.csv")
 rna=read.csv("8cell_32cell_Tert_counts.csv")
