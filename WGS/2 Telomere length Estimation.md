@@ -1,15 +1,15 @@
-#Telomere length Estimation
+# Telomere length Estimation
 
 *Based on the whole-genome sequencing data, telseq(https://github.com/zd1/telseq) and Qmotif (https://github.com/AdamaJava/adamajava/tree/master/qmotif) were used to estimae the telomere length.*
 
-##Telseq 
+## Telseq 
 
 ```shell
 telseq -u -k 12 -r 150 -o /public/home/zj2020/telseq_res/telseq/${ID}.tel  ${ID}.bam
 ```
 
 
-##Qmotif
+## Qmotif
 
 ```java
 java -Xmx15g -jar /qmotif-1.0.jar \
