@@ -23,7 +23,7 @@ java -Xmx15g -jar /qmotif-1.0.jar \
      --loglevel INFO
 ```
 
-*Configure file used for qmotif analysis*
+### *Configure file used for qmotif analysis*
 
 ```shell
 [PARAMS]
