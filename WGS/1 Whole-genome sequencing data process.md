@@ -1,8 +1,8 @@
-#Whole-genome sequencing data process
+# Whole-genome sequencing data process
 
-####*Align sequence reads to genome reference*
+#### *Align sequence reads to genome reference*
 
-##1 Trimmomatic
+## 1 Trimmomatic
 ```java
 mkdir log_path
 
@@ -17,7 +17,7 @@ ILLUMINACLIP:${params.trim_adapter}:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4
 ```
 
 
-##2.1 BWA
+## 2.1 BWA
 ```Shell
 mkdir log_path
 
@@ -31,7 +31,7 @@ ${bwa} mem -t ${cpus} \
 ```
 
 
-##2.2 Bam_sort
+## 2.2 Bam_sort
 ```shell
 mkdir tmp_path
 mkdir log_path
@@ -53,7 +53,7 @@ ${sambamba} index \
 ```
 
 
-##2.3 BaseRecalibrator
+## 2.3 BaseRecalibrator
 ```java
 mkdir tmp_path
 mkdir log_path
@@ -73,7 +73,7 @@ java -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10 -XX:+PrintFlagsFinal \
 2> log_path/${sample}-BQSR.log
 ```
 
-##2.4 PrintReads
+## 2.4 PrintReads
 ```java
 mkdir tmp_path
 mkdir log_path
