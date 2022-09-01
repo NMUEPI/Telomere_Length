@@ -13,5 +13,5 @@ Telseq *(https://github.com/zd1/telseq)* and Qmotif *(https://github.com/AdamaJa
 ### Single-cell Multiomics Analysis
 Datasets can be accessed in the NCBI Gene Expression Omnibus (GEO) repository under their GSE numbers: accession numbers of mouse embryo scRNA-seq data are GSE136714; accession numbers of mouse embryo scNOME-seq data are GSE136715.
 
-### Transcription Factor Analysis
+### Singel-cell Transcription Factor Analysis
 Based on the single-cell RNA-seq data, R package named Scenic *(https://github.com/aertslab/SCENIC)* was used to perform transcript factor analysis.
